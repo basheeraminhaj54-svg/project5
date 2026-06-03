@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+<h2>Customer Details</h2>
+
+<form onsubmit="showDetails(); return false;">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="tel" id="number" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <label>City:</label><br>
+    <input type="text" id="city" required><br><br>
+
+    <input type="submit" value="submit">
+</form>
+
+<h3>Entered Details</h3>
+<p id="result"></p>
+
+<script>
+function showDetails() {
+    document.getElementById("result").innerHTML =
+        "Name: " + document.getElementById("name").value + "<br>" +
+        "Number: " + document.getElementById("number").value + "<br>" +
+        "Email: " + document.getElementById("email").value + "<br>" +
+        "City: " + document.getElementById("city").value;
+}
+</script>
+
+</body>
+</html>
